@@ -5,7 +5,7 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 include_once '../DataBase.php';
-include_once './Post.php';
+include_once '../models/Topic.php';
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST')
 {
