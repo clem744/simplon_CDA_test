@@ -1,0 +1,27 @@
+CREATE DATABASE IF NOT EXISTS `Api_Rest`
+
+CREATE TABLE `Topic` (
+  `id`int NOT NULL,
+  `title` tinytext NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `Post` (
+  `id` int NOT NULL,
+  `content` text NOT NULL,
+  `author` tinytext NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+ALTER TABLE `Topic`
+    ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `Post`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `Topic`
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE `Post`
+MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+COMMIT;
